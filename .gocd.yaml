@@ -12,10 +12,8 @@ pipelines:
         branch: master
     stages:
       - build:
-          clean_workspace: true
           elastic_profile_id: helm
           tasks:
-             - exec:
-                 command: echo
-                 arguments:
-                  - hi
+            - script: |
+                set -e ## avoids that the pipeline is green on failing tests
+                echo "bla"
