@@ -7,7 +7,7 @@ pipelines:
     lock_behavior: none
     materials:
       git:
-        git: https://github.com/gocd-contrib/getting-started-repo
+        git: https://github.com/nullck/gocd-test
         shallow_clone: true
         auto_update: true
         branch: master
