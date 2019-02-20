@@ -1,8 +1,7 @@
 format_version: 3
 pipelines:
   helm:
-    group: sample
-    template: l
+    group: helm
     label_template: ${COUNT}
     lock_behavior: none
     materials:
