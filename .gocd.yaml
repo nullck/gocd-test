@@ -1,0 +1,17 @@
+format_version: 3
+pipelines:
+  helm:
+    group: sample
+    template: l
+    label_template: ${COUNT}
+    lock_behavior: none
+    materials:
+      git:
+        git: https://github.com/gocd-contrib/getting-started-repo
+        shallow_clone: true
+        auto_update: true
+        branch: master
+    stages:
+      - build:
+          clean_workspace: true
+          elastic_profile_id: helm
